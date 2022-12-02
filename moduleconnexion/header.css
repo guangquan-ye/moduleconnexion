@@ -1,0 +1,50 @@
+.items{
+    display: flex;
+    justify-content: flex-end;
+}
+.items ul{
+    
+    display: flex;
+    flex-direction: row;
+    padding-right: 10%;
+}
+.items li{
+    float: right;
+    list-style: none;
+    display: flex;
+    padding: 4%;
+    color: white;
+}
+.items a{
+    text-decoration: none;
+    color: white;
+}
+.items a:hover{
+  transform: scale(1.2);
+  
+  
+}
+
+#decobutton{
+  color: red;
+  border: 2px solid red;
+  background: none;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin: auto;
+    padding: 0.5em 1em;
+}
+#decobutton:hover {
+  color: white;
+  background: red;
+  
+  border-radius: 5px;
+}
+
+
+
+ 
