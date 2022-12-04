@@ -10,10 +10,9 @@
 </head>
 <body>
     <footer>
-    <div class="linkg">
-        <a href="https://github.com/guangquan-ye/moduleconnexion">GITHUB</a>
-            
-     </div>
+        <div class="linkg">
+            <a href="https://github.com/guangquan-ye/moduleconnexion" target="_blank">GITHUB</a>
+        </div>
     </footer>
 </body>
 </html>

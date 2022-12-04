@@ -17,29 +17,15 @@ include "inscriptionquery.php" ;
 
 </head>
 <body>
-<div class="fond">
+        <div class="fond">
     <?php include "header.php" ?>
-    
-    <div class="midpart">
-        
-    <h1>Module de Connexion</h1>
-    </div>
-    
-    <div class="msg"><center><?php echo $succes ?></center></div>
-        
-
-
-
-
-
-
-    
-    
-    
-
+        <div class="midpart">
+        <h1>Module de Connexion</h1>
+        </div>
+        <div class="msg"><center><?php echo $succes ?></center></div>
     <footer>
         <?php include 'footer.php' ?>
     </footer>
-</div>    
+    </div>    
 </body>
 </html>

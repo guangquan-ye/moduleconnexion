@@ -2,8 +2,8 @@
  
 $insc="";
 include "connect.php";
-// $mysqli = new mysqli('localhost', 'root', 'root', 'moduleconnexion');
-$mysqli = new mysqli('localhost', 'shinz', 'Azerty!123a', 'moduleconnexion');
+
+
 if(isset($_POST['edit'])&& $_POST['pass']==$_POST['repass'] && !empty($_POST['nom']) && !empty($_POST['prenom']) && !empty ($_POST['pass'])){
     $id=$_SESSION['userID'];
     $nom=$_POST['nom'];
@@ -21,12 +21,6 @@ else{
 
     $request = $mysqli->query("SELECT * FROM utilisateurs WHERE id = '$_SESSION[userID]'");
     $result=$request->fetch_all();
-
-
-    
-       
-    
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,49 +34,42 @@ else{
 <body>
     <div class="fondprofil">
     <?php include 'header.php' ?>
-    <div class="main">
+        <div class="main">
             <div class="formulaire">
-            
-                
-                
-                
-                <form method="post">
-                <h1>Bienvenue <?php echo $_SESSION["user"] ?></h1>
-                <h2>Pour modifier votre profil</h2>
+                 <form method="post">
+                    <h1>Bienvenue <?php echo $_SESSION["user"] ?></h1>
+                    <h2>Pour modifier votre profil</h2>
                 <div class="msg"><center><?php echo $insc ?></center></div>
                 <div class="box">
-                <label for="prenom">Prenom</label>
-                <br>
-                <input type="text" name="prenom" placeholder="<?php echo $result[0][2] ?>">
+                    <label for="prenom">Prenom</label>
+                    <br>
+                    <input type="text" name="prenom" placeholder="<?php echo $result[0][2] ?>">
+                </div>
+                    <br>
+                    <div class="box">
+                    <label for="nom">Nom</label>
+                    <br>
+                    <input type="text" name="nom" placeholder="<?php echo $result[0][3] ?>">
                 </div>
                 <br>
                 <div class="box">
-                <label for="nom">Nom</label>
-                <br>
-                <input type="text" name="nom" placeholder="<?php echo $result[0][3] ?>">
+                    <label for="mdp">Nouveau mot de passe</label>
+                    <br>
+                    <input type="password" name="pass" placeholder="Nouveau mot de passe">
                 </div>
                 <br>
-                <div class="box">
-                <label for="mdp">Nouveau mot de passe</label>
-                <br>
-                <input type="password" name="pass" placeholder="Nouveau mot de passe">
+                    <div class="box">
+                    <label for="confirm">Confirmer le nouveau mot de passe</label>
+                    <br>
+                    <input type="password" name="repass" placeholder="Confirmer nouveau mot de passe">
                 </div>
-                <br>
-                <div class="box">
-                <label for="confirm">Confirmer le nouveau mot de passe</label>
-                <br>
-                <input type="password" name="repass" placeholder="Confirmer nouveau mot de passe">
-                </div>
-                <br>
-                <div class="button">
-                <button type="submit" id="buttoninsc" name="edit">Modifier</button>
+                    <br>
+                    <div class="button">
+                    <button type="submit" id="buttoninsc" name="edit">Modifier</button>
                 </div>
             </div>
-    </div>
-
-    <?php include 'footer.php' ?>
+        </div>
+        <?php include 'footer.php' ?>
 </div>
-
-   
 </body>
 </html>

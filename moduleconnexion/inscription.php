@@ -11,53 +11,40 @@
 </head>
 <body>
     <div class="fondinsc">
-    <?php include 'header.php' ?>
-    
-
-        <div class="main">
-            <div class="formulaire">
-            
-                
-                <form method="post">
-                <h2 id="h2insc">Pour vous inscrire</h2>
-                
+        <?php include 'header.php' ?>
+    <div class="main">
+        <div class="formulaire">
+        <form method="post">
+            <h2 id="h2insc">Pour vous inscrire</h2>
                 <div class="msg"><center><?php echo $erreur ?></center></div>
-                <br>
-                
-                <div class="box">
-                
+        <br>
+            <div class="box">
                 <input type="text" name="login" placeholder="Login">
-                </div>
-                <br>
-                <div class="box">
-                
+            </div>
+        <br>
+            <div class="box">
                 <input type="text" name="nom" placeholder="Nom">
-                </div>
-                <br>
-                <div class="box">
-                
+            </div>
+        <br>
+            <div class="box">
                 <input type="text" name="prenom" placeholder="Prenom">
-                </div>
-                <br>
-                <div class="box">
-                
+            </div>
+            <br>
+            <div class="box">
                 <input type="password" name="password" placeholder="Mot de passe">
-                </div>
-                <br>
-                <div class="box">
-                
+            </div>
+            <br>
+            <div class="box">
                 <input type="password" name="confirm" placeholder="Confirmer mot de passe">
-                </div>
-                <br>
+            </div>
+            <br>
                 <div class="container">
                 <button type="submit" id ="buttoninsc" name="submit">Inscription</button>
-                </div>
             </div>
         </div>
-
-
+    </div>
     <footer>
-    <?php include 'footer.php' ?>
+        <?php include 'footer.php' ?>
     </footer>
 </div>
 </body>

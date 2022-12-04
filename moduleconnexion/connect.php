@@ -1,4 +1,6 @@
-<?php $mysqli = new mysqli('localhost', 'root', 'root', 'moduleconnexion');
+<?php 
+// $mysqli = new mysqli('localhost', 'root', 'root', 'moduleconnexion');
+$mysqli = new mysqli('localhost', 'shinz', 'Azerty!123a', 'guangquan-ye_moduleconnexion');
 $msg="";
 if(session_id() == ''){
     session_start();
